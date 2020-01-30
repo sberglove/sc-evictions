@@ -45,7 +45,7 @@ df %>%
     ## # A tibble: 1 x 4
     ##     geoid name             evictions geometry
     ##     <dbl> <chr>                <dbl> <list>  
-    ## 1 4550875 North Charleston     3660. <XY>
+    ## 1 4550875 North Charleston     3660. <NULL>
 
 North Charleston had the most evictions in South Carolina in 2016, 3,660
 evictions.
