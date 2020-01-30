@@ -14,8 +14,6 @@ REPORTS =
 all : $(DATA) $(EDA) $(REPORTS)
 
 # Data dependencies
-#boundaries.rds : boundaries.R
-#evictions.rds : evictions.R
 evictions_boundaries.rds : evictions.rds boundaries.rds
 
 # EDA study and report dependencies
