@@ -1,0 +1,41 @@
+---
+title: "Evictions in South Carolina"
+author: "Sara Berg-Love"
+date: "`r Sys.Date()`"
+output: 
+  github_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r message=FALSE, warning=FALSE}
+# Libraries
+library(tidyverse)
+
+# Parameters
+file_data <- here::here("data/evictions_boundaries.rds")
+  
+#===============================================================================
+
+df <- read_rds(file_data)
+```
+
+## Summary
+
+```{r}
+df %>% 
+  select(-geometry) %>% 
+  summary()
+```
+
+## Evictions by city
+
+```{r}
+df %>% 
+  top_n(1, evictions)
+```
+
+North Charleston had the most evictions in South Carolina in 2016, 3,660 evictions.
